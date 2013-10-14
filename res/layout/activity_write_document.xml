@@ -1,0 +1,93 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.WriteActivity">
+
+    <!-- Write progress -->
+    <LinearLayout android:id="@+id/write_status"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <ProgressBar style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:id="@+id/write_status_message"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:fontFamily="sans-serif-light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/write_progress_sending_in" />
+    </LinearLayout>
+
+    <!-- Login form -->
+    <ScrollView
+        android:id="@+id/write_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/bbs_category_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/write_category_prompt" />
+
+            <EditText
+                android:id="@+id/title_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/write_title_hint"
+                android:inputType="textAutoCorrect|textWebEditText"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/content_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/write_content_hint"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine|textLongMessage"
+                android:minLines="5"
+                android:gravity="top" />
+
+            <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+               
+                <EditText
+                    android:id="@+id/tag_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_toLeftOf="@+id/attach_imageButton"
+                    android:layout_alignBaseline="@+id/attach_imageButton"
+                    android:hint="@string/write_tag_hint"
+                    android:inputType="textAutoCorrect|textWebEditText"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:gravity="bottom" />
+
+                <ImageButton
+                    android:id="@+id/attach_imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/write_phone_description"
+                    android:src="@drawable/ic_action_new_picture" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</merge>

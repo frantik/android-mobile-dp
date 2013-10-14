@@ -1,0 +1,189 @@
+<!--
+  Copyright 2013 작은광명
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dvdprime.mobile.android"
+    android:versionCode="20"
+    android:versionName="1.0"
+    android:installLocation="auto" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+    
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    
+    <!-- required for YouTube -->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!-- required for GCM -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission android:name="com.dvdprime.mobile.android.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.dvdprime.mobile.android.permission.C2D_MESSAGE" />
+    
+    <!-- Application -->
+    <application
+        android:name=".DpApp"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true" >
+        <!-- 초기 실행 액티비티 -->
+        <activity
+            android:name="com.dvdprime.mobile.android.ui.MainActivity"
+            android:label="@string/short_app_name"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 애드포스트 액티비티 -->
+        <activity android:name="com.nbpcorp.mobilead.sdk.MobileAdBrowserActivity" />
+        
+        <!-- ADMOB - 사용하기 위해 API level 13 이상 최신 SDK 가 필요합니다. -->
+        <activity
+            android:name="com.google.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        
+        <!-- 정보 액티비티 -->
+        <activity
+            android:name=".ui.AboutActivity"
+            android:label="@string/action_bar_about"
+            android:configChanges="keyboardHidden|orientation|screenSize"  />
+        
+        <!-- 설정 액티비티 -->
+        <activity
+            android:name=".ui.SettingActivity"
+            android:label="@string/action_bar_setting"
+            android:configChanges="keyboardHidden|orientation|screenSize"  />
+        
+        <!-- 로그인 액티비티 -->
+       <activity
+            android:name=".ui.LoginActivity"
+            android:label="@string/action_bar_login"
+            android:configChanges="keyboardHidden|orientation|screenSize"  />
+        
+        <!-- 알림 목록 관리 액티비티 -->
+        <activity 
+            android:name=".ui.NotificationListActivity" 
+            android:configChanges="keyboardHidden|orientation|screenSize"  />
+        
+       <!-- 게시판 글 목록 관리 액티비티 -->
+        <activity 
+            android:name=".ui.DocumentListActivity" />
+        
+        <!-- 게시판 글 내용 별도 액티비티 -->
+        <activity
+            android:name=".ui.DocumentViewActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="dvdprime.donga.com" android:pathPrefix="/bbs/view.asp" />
+            </intent-filter>
+        </activity>
+        
+        <!-- 글 쓰기 액티비티 -->
+        <activity
+            android:name=".ui.WriteDocumentActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        
+        <!-- 댓글 쓰기 액티비티 -->
+        <activity
+            android:name=".ui.WriteCommentActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        
+        <!-- 글 이미지 선택 액티비티 -->
+        <activity
+            android:name=".ui.WriteGalleryActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        
+        <!-- 플리커 인증 액티비티 -->
+        <activity 
+            android:name=".ui.FlickrOauthActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="mobiledp-flickr-oauth" />
+            </intent-filter>
+        </activity>
+        
+        <!--
+          BroadcastReceiver that will receive the C2DM messages from GCM
+          services and handle them to the custom IntentService.
+
+          The com.google.android.c2dm.permission.SEND permission is necessary
+          so only GCM services can send data messages for the app.
+        -->
+        <receiver android:name=".gcm.GCMRedirectedBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.dvdprime.mobile.android" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+          Application-specific subclass of GCMBaseIntentService that will
+          handle received messages.
+
+          By default, it must be named .GCMIntentService, unless the
+          application uses a custom BroadcastReceiver that redefines its name.
+        -->
+        <service android:name=".gcm.GCMIntentService" />
+
+    </application>
+
+</manifest>

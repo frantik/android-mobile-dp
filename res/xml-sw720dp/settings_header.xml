@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <header
+        android:fragment="com.dvdprime.mobile.android.fragment.SettingPreferenceFragment"
+        android:title="@string/action_bar_setting" />
+    <header
+        android:fragment="com.dvdprime.mobile.android.fragment.AboutPreferenceFragment"
+        android:title="@string/action_bar_about" />
+
+</preference-headers>

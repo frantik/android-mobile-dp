@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2007, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License"); 
+** you may not use this file except in compliance with the License. 
+** You may obtain a copy of the License at 
+**
+**     http://www.apache.org/licenses/LICENSE-2.0 
+**
+** Unless required by applicable law or agreed to in writing, software 
+** distributed under the License is distributed on an "AS IS" BASIS, 
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+** See the License for the specific language governing permissions and 
+** limitations under the License.
+*/
+-->
+<com.dvdprime.mobile.android.ui.CheckableFrameLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="6.66dp">
+
+    <TextView android:id="@+id/document_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/document_list_recommend"
+        android:layout_alignParentLeft="true"
+        android:paddingRight="3.33dp"
+        android:singleLine="false" 
+        android:gravity="left"
+        android:text="@string/empty"
+        android:textAppearance="@style/CommonTextAppearanceListContents" />
+
+    <TextView android:id="@+id/document_list_recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/document_list_count"
+        android:layout_alignBaseline="@+id/document_list_title"
+        android:layout_marginRight="3.33dp"
+        android:background="@drawable/rounded_corners_darkgray"
+        android:paddingLeft="3.33dp"
+        android:paddingRight="3.33dp"
+        android:singleLine="true"
+        android:textAppearance="@style/WhiteBaseSmallText" />
+
+    <TextView
+        android:id="@+id/document_list_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/document_list_title"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/rounded_corners_lightgray"
+        android:paddingLeft="3.33dp"
+        android:paddingRight="3.33dp"
+        android:singleLine="true"
+        android:textAppearance="@style/DarkGrayBaseSmallText" />
+
+    <TextView android:id="@+id/document_list_no" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/document_list_title"
+        android:layout_alignParentLeft="true"
+        android:ellipsize="end" 
+        android:singleLine="true"
+        android:textAppearance="@style/GrayBaseSmallText" />
+
+    <TextView android:id="@+id/document_list_user_name" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/document_list_title"
+        android:layout_toRightOf="@+id/document_list_no"
+        android:layout_alignBaseline="@+id/document_list_no"
+        android:paddingLeft="3.33dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textAppearance="@style/DarkGrayBaseSmallText" />
+
+    <TextView android:id="@+id/document_list_write_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/document_list_count"
+        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@+id/document_list_no"
+        android:singleLine="true" 
+        android:textAppearance="@style/DarkGrayBaseSmallText" />
+	
+</com.dvdprime.mobile.android.ui.CheckableFrameLayout>

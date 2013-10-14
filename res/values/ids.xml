@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="id_holder" type="id" />
+    
+    <item name="id_position" type="id" />
+    
+    <item name="id_uniqid" type="id" />
+
+</resources>

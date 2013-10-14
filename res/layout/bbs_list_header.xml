@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bbs_list_header_textView"
+    android:layout_width="match_parent"
+    android:layout_height="25.33dip"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="0dp"
+    android:background="@drawable/common_list_indexer_bg"
+    android:focusable="false"
+    android:gravity="left|center_vertical"
+    android:paddingLeft="11.33dip"
+    android:shadowColor="@color/black"
+    android:shadowDx="-1"
+    android:shadowDy="-1"
+    android:shadowRadius="0.1"
+    android:textColor="@color/white"
+    android:textSize="14.67dip"
+    android:textStyle="bold" />

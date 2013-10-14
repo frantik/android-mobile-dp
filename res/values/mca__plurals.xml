@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <plurals name="selected_items">
+        <item quantity="one">1개 선택</item>
+        <item quantity="other">%d개 선택</item>
+    </plurals>
+
+</resources>

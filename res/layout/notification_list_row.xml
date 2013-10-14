@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2007, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License"); 
+** you may not use this file except in compliance with the License. 
+** You may obtain a copy of the License at 
+**
+**     http://www.apache.org/licenses/LICENSE-2.0 
+**
+** Unless required by applicable law or agreed to in writing, software 
+** distributed under the License is distributed on an "AS IS" BASIS, 
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+** See the License for the specific language governing permissions and 
+** limitations under the License.
+*/
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/notification_list_header"
+        android:layout_width="match_parent"
+        android:layout_height="25.33dip"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/common_list_indexer_bg"
+        android:focusable="false"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="11.33dip"
+        android:shadowColor="@color/black"
+        android:shadowDx="-1"
+        android:shadowDy="-1"
+        android:shadowRadius="0.1"
+        android:textColor="@color/white"
+        android:textSize="14.67dip"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notification_list_header"
+        android:padding="6.66dp" >
+
+        <TextView
+            android:id="@+id/notification_list_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="left"
+            android:paddingRight="3.33dp"
+            android:singleLine="false"
+            android:text="@string/empty"
+            android:textAppearance="@style/CommonTextAppearanceListContents" />
+
+        <TextView
+            android:id="@+id/notification_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notification_list_message"
+            android:layout_toLeftOf="@+id/document_list_date"
+            android:ellipsize="end"
+            android:paddingLeft="3.33dp"
+            android:singleLine="true"
+            android:textAppearance="@style/GrayBaseSmallText" />
+
+        <TextView
+            android:id="@+id/notification_list_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/notification_list_title"
+            android:layout_alignParentRight="true"
+            android:singleLine="true"
+            android:textAppearance="@style/GrayBaseSmallText" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,168 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="Theme.DpLight">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="CommonTextAppearanceListContents">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/content_base_font_color</item>
+        <item name="android:textColorLink">@color/blue_base_font_color</item>
+    </style>
+    
+    <!-- Text Styles -->
+    <style name="CommonTextAppearanceButton">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white_base_font_color</item>
+    </style>
+    
+    <style name="CommonTextAppearanceTitleWhite">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white_base_font_color</item>
+    </style>
+
+    <style name="CommonTextAppearanceTitleBlack">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/content_base_font_color</item>
+    </style>
+
+    <style name="CommonTextAppearanceTitleEmerald">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/emerald_base_font_color</item>
+    </style>
+
+    <style name="CommonTextAppearanceTitleGray">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/gray_base_font_color</item>
+    </style>
+
+    <style name="YellowBaseSecondaryText">
+        <item name="android:textColor">@color/yellow_base_font_color</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="BlueBaseSecondaryText">
+        <item name="android:textColor">@color/blue_base_font_color</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="EmeraldBaseSecondaryText">
+        <item name="android:textColor">@color/emerald_base_font_color</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="OrangeBaseSecondaryText">
+        <item name="android:textColor">@color/orange_base_font_color</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="GrayBaseSecondaryText">
+        <item name="android:textColor">@color/gray_base_font_color</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="BlackBaseSecondaryText">
+        <item name="android:textColor">@color/content_base_font_color</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColorLink">@color/blue_base_font_color</item>
+    </style>
+    
+    <style name="WhiteBaseSecondaryText">
+        <item name="android:textColor">@color/white_base_font_color</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColorLink">@color/blue_base_font_color</item>
+    </style>
+    
+    <style name="BlackThemeCommentText">
+        <item name="android:textColor">@color/dp_color003</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColorLink">@color/dp_color028</item>
+    </style>
+    
+    <style name="WhiteThemeCommentText">
+        <item name="android:textColor">@color/emerald</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColorLink">@color/orange</item>
+    </style>
+
+    <style name="OrangeBaseSmallText">
+        <item name="android:textColor">@color/orange_base_font_color</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="GrayBaseSmallText">
+        <item name="android:textColor">@color/gray_base_font_color</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="DarkGrayBaseSmallText">
+        <item name="android:textColor">@color/dark_gray_base_font_color</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="LightGrayBaseSmallText">
+        <item name="android:textColor">@color/light_gray_base_font_color</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="EmeraldBaseSmallText">
+        <item name="android:textColor">@color/emerald_base_font_color</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="WhiteBaseSmallText">
+        <item name="android:textColor">@color/white_base_font_color</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ContentBaseSmallText">
+        <item name="android:textColor">@color/content_base_font_color</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="BlueBaseSmallText">
+        <item name="android:textColor">@color/dp_color015</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RedBaseSmallText">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="LoadingDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+     
+</resources>

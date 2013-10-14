@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='pragma' content='no-cache'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no'>
+<link href='../css/bootstrap.min.css' rel='stylesheet' media='screen'>
+</head>
+<body style='overflow-x: hidden'>
+	<div class='container' style='width: 90%; margin-left: 5%; margin-right: 5%;'>
+		<div class="progress progress-striped active">
+			<div class="progress-bar" style="width: 100%"></div>
+		</div>
+	</div>
+	<script src='../js/jquery-2.0.3.min.js'></script>
+	<script type="text/javascript">
+	$(function(){
+		var _width = $('.container').width(), _height = $(document).height()/2, $bar = $('.progress-bar');
+		$('.container').css('margin-top', _height - 10);
+// 		var progress = function() {
+// 			if ($bar.width()>=_width) {
+// 				$bar.width(0);
+// 				clearInterval(interval);
+// 				setTimeout(function() {
+// 					interval = setInterval(progress, 100);
+// 				}, 500);
+// 			} else {
+// 				$bar.width($bar.width()+(_width/5));
+// 			}
+// 		};
+// 		var interval = setInterval(progress, 100);
+	});
+	</script>
+</body>
+</html>

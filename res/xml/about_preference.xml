@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+            android:title="만든이 정보">
+        
+        <Preference
+            android:title="닉네임: 작은광명"
+            android:summary="잉여력 몰빵해서 만들고 있습니다."/>
+        
+        <PreferenceScreen
+            android:key="aboutEmail"
+            android:title="이메일: frantik@gmail.com"
+            android:summary="버그 및 성능 개선 보내주세요." />
+        
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="애플리케이션 정보">
+            
+        <Preference
+            android:key="aboutVersion"
+            android:title="버전 정보"  />
+        
+        <PreferenceScreen
+            android:title="라이센스"
+            android:summary="Apache License, Version 2.0 라이센스를 따릅니다.">
+            
+            <intent android:action="android.intent.action.VIEW"
+                android:data="http://www.apache.org/licenses/LICENSE-2.0" />
+        </PreferenceScreen>
+        
+        <PreferenceScreen
+            android:title="오픈소스"
+            android:summary="오픈소스로 github.com에서 함께 개발하실 수 있습니다.">
+            
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://github.com/frantik/android-mobile-dp" />
+        </PreferenceScreen>
+        
+        </PreferenceCategory>
+    
+</PreferenceScreen>
