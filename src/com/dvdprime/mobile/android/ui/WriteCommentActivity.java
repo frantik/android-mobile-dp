@@ -367,14 +367,6 @@ public class WriteCommentActivity extends FragmentActivity {
                     AndroidUtil.showToast(mContext, getString(R.string.toast_write_comment_success_message));
                     // API서버로 알림 정보를 전송
                     if (memberId != null) {
-                        Map<String, String> params = new HashMap<String, String>();
-                        params.put("ids", memberId);
-                        params.put("type", "01");
-                        params.put("title", docTitle);
-                        params.put("message", StringUtil.curtail(mContent, 100, ".."));
-                        params.put("targetUrl", docUrl);
-                        params.put("targetKey", "");
-                        LOGD(TAG, "params ===> " + params);
                         DpApp.getRequestQueue().add(new ApiRequest(Method.POST, Config.MOBILE_DP_API_NOTIFICATION_POST, null, null) {
                             protected Map<String, String> getParams() throws AuthFailureError {
                                 Map<String, String> params = new HashMap<String, String>();
