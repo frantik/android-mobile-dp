@@ -24,7 +24,7 @@ Use Libraries
 DP 서버가 이미지 업로드를 제대로 지원 못하고 있어서 플리커에 업로드 후 URL를 첨부하는 방식입니다.
 
 * #####Google Analytics
-각 통계정보는 [Google Anaytics][5]를 사용합니다.
+각 통계정보는 [Google Anaytics][6]를 사용합니다.
 모바일 앱 사용량 통계를 지원해줍니다.
 
 License
@@ -51,3 +51,4 @@ License
  [3]: https://github.com/chrisbanes/ActionBar-PullToRefresh
  [4]: https://android.googlesource.com/platform/frameworks/volley
  [5]: http://www.flickr.com/services/api/
+ [6]: http://www.google.com/analytics/
